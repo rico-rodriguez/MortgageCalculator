@@ -1,0 +1,65 @@
+/*
+            #   Task:   Calculate loan payment for fixed rate loans:
+            
+            #   Total loan value [P]:
+                                # Home purchase price
+                                # Amount of down payment
+                                # Origination fee of 1% added to initial loan amount
+                                # Fixed fee of $2500 added to total
+                                
+            #   Annual interest rate [r]:
+
+            #   Number of years [n]:
+                                # 30 years for fixed rate loans
+                                # 15 years for fixed rate loans
+
+            #   Number of payments [n]:
+                                # 30 years = 360 payments
+                                # 15 years = 180 payments
+
+            #   Monthly payment [M]:
+                                # M = P * (r/12) / (1 - (1 + r/12)^-n)
+                                # M = monthly payment
+                                # P = total loan value
+                                # r = annual interest rate
+                                # n = number of payments
+                                # 12 = number of months in a year
+                                # ^-n = exponent of -n
+
+            #   Variables:
+                                # var [loanDuration]: 15 or 30
+                                # var Purchase price
+                                # var Down Payment
+                                # Origination fee (1% to loan amount)
+                                # Fixed fee ($2500)
+
+            #   Loan insurance:
+                                # Required for any loan which:
+                                    # Equity at inception < 10% market value
+                                    # (10% + deficit in home value) VS. [Loan value]
+                                # If required, cost is 1% of initial loan value divided by [loanDuration]
+
+            #   HOA Fees:
+                                # [Monthly total] = [Yearly fee] / [Payment Period]
+                                # [Monthly total] += [Base Payment]
+             
+             #  Escrow
+                                # Both based off current market value at time of loan inception:
+                                    # Property tax = 1.25% yearly / 12
+                                    # Home owner insurance = 0.75% yearly / 12
+                                # Compute payment per term (monthly) and + to total monthly payment
+                                
+             #  Approval
+                                # Determine if [Monthly payment] is >= 25% of buyers monthly income
+                                    # If over, deny, else, approve
+                                        #If denied, display "Placing more money down and Look at buying a more affordable home."
+
+            #   Monthly payment
+                                # Base loan amount (principal and interest)
+                                # Escrow amount
+                                    # Homeowner insurance + Property tax (1.25% of total home value by year/12)
+                                # HOA Fees
+                                    # If any, by year / 12
+                                # Loan Insurance
+                                    # If any, 1% of initial loan value / [loanDuration]
+             */
